@@ -3,7 +3,7 @@ import os
 import sys
 import shutil
 
-from Demographic_simulations_msprime import msprime_simulation
+from demographic_simulations_msprime import msprime_simulation
 
 # Set the working directory for demographic models
 working_directory = '/Users/emanuelmfonseca/projects/LowCoverageGenomes/Analyses/Demographic_models'
