@@ -6,7 +6,7 @@ This repository contains an implementation of a method for correcting low-covera
 
 ## Prepring
 
-Fonseca, E.M., Tran, L., Mendonza, H., Gutenkunst, R.N. Inferring beyond the blur: Unveiling population histories with corrected low-coverage genomes (coming soon).
+Fonseca, E.M., Tran, L., Mendonza, H., Gutenkunst, R.N. Beyond the blur: unveiling population histories with corrected low-coverage genomes (coming soon).
 
 ## Getting Started
 
