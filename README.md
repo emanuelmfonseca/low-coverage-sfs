@@ -12,7 +12,7 @@ Fonseca, E.M., Tran, L., Mendonza, H., Gutenkunst, R.N. Beyond the blur: unveili
 
  - The `/low-cov` directory contains the entire codebase used to implementing the method designed to correct bias arising from low-coverage sequencing.
  
- -  The `/simulations` directory contains the code for generating and running simulations at various coverage levels. Moreover, it includes the resulting site frequency spectra from these simulations
+ -  The `/simulations` directory contains the code for generating and running simulations at various coverage levels. Moreover, it includes the resulting site frequency spectra from these simulations.
 
  -  The `/demography` directory contains the code for generating and running demographic inference under various coverage levels.
 
