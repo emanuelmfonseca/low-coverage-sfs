@@ -43,7 +43,7 @@ for inbreed_coef in inbreed_coefs:
         
         # Generate VCF files using SLiM
         while i < n_snsps:
-            silent = subprocess.run(f'slim -d Fis={inbreed_coef} -d ns={ns} -d i={replicate+1} /Users/emanuelmfonseca/projects/LowCoverageGenomes/Scripts/Analyses_scripts/Bottlegrowth.slim', stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+            silent = subprocess.run(f'slim -d Fis={inbreed_coef} -d ns={ns} -d i={replicate+1} /Users/emanuelmfonseca/projects/LowCoverageGenomes/Scripts/Analyses_scripts/bottlegrowth.slim', stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
             
             if i == 0:
                 vcf_path = os.path.join(set_wc, 'VCF_SLiM', f"simulation_SLiM_bottlegrowth_rep_F_{inbreed_coef}_replicate{replicate + 1}_prov.vcf")
