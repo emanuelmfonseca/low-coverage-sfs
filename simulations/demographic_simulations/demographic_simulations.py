@@ -75,8 +75,7 @@ for index, pop_size in enumerate(eval(params[0])):
                                 recomb=1e-8,
                                 rep=replicate,
                                 coverage=coverage,
-                                coverage_distribution=coverage_distribution,
-                                linkage=False,
+                                coverage_distribution=coverage_distribution,,
                                 seed=replicate)
     
     # Copy genomic files for different coverages
