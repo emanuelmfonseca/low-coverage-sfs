@@ -8,7 +8,7 @@ This repository contains an implementation of a method for correcting low-covera
 
 Fonseca, E.M., Tran, L., Mendonza, H., Gutenkunst, R.N. Beyond the blur: unveiling population histories with corrected low-coverage genomes (coming soon).
 
-## What does this folder contain?
+## What does this repository contain?
 
  - The `/low-cov` directory contains the entire codebase used to implementing the method designed to correct bias arising from low-coverage sequencing.
  
