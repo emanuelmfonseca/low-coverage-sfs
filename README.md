@@ -1,4 +1,4 @@
-# SFS-based model to optimize demographic inference by addressing low-coverage sequencing bias
+# Optimizing demographic inference with dadi using low-coverage sequencing data
 
 ## Overview
 
