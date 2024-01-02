@@ -6,7 +6,7 @@ from pathlib import Path
 import random
 
 # Function for msprime simulation
-def msprime_simulation(working_directory, model, params, values, nref, ns, ploidy, mu, seq_length, n_snps, recomb, rep, coverage, coverage_distribution, seed):
+def msprime_models(working_directory, model, params, values, nref, ns, ploidy, mu, seq_length, n_snps, recomb, rep, coverage, coverage_distribution, seed):
     
     # Extract model parameters
     model_params = {param: float(values[index]) for index, param in enumerate(params)}
