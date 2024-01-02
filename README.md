@@ -23,7 +23,8 @@ Fonseca, E.M., Tran, L., Mendonza, H., Gutenkunst, R.N. Inferring beyond the blu
 ### Usage
 
 ```python
-make_low_cov_func(demo_model, data_dict, pop_ids, nseq, nsub, sim_threshold, inbreeding), where:
+make_low_cov_func(demo_model, data_dict, pop_ids, nseq, nsub, sim_threshold, inbreeding)
+```
 
 - demo_model: specified demographic model in dadi
 - data_dict: a data dictionary comprising information extracted from a VCF file
@@ -33,4 +34,3 @@ make_low_cov_func(demo_model, data_dict, pop_ids, nseq, nsub, sim_threshold, inb
 - sim_threshold: This method switches between analytic and simulation-based methods. Setting this threshold to 0 will always use simulations, while setting it to 1 will always use analytics. Values in between indicate that simulations will be employed for thresholds below that value.
 - inbreeding: should inbreeding be included? [True/False]
 
-```
