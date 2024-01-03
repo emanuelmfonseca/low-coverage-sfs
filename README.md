@@ -58,8 +58,8 @@ popfile = '/simulations/simulated_datasets/1D_exp_growth_two_epochs_nu1_10_T1_0.
 #### Define data parameters
 ```python
 pop_id = 'pop1'  # Population name
-nseq = 40  # Total number of sequenced individuals
-nsub = 32  # Number of individuals to be subsampled
+nseq = 40  # Total number of sequenced chromosomes
+nsub = 32  # Number of chromosomes to be subsampled
 ss = {pop_id: nsub // 2}  # Subsampling dictionary
 ```
 
