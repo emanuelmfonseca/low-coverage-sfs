@@ -3,25 +3,21 @@ from dadi.LowCoverage import compute_cov_dist, low_cov_precalc
 
 def make_low_cov_func(func, dd, pop_ids, nseq, nsub, sim_threshold=1e-2, inbreeding=False):
     """
-    Generage a version of func accounting for low coverage distortion
-    
-    func: The frequency spectrum generating function to which distortion will
-          be applied. It is assumed that the second argument is the final
-          sample size (in haplotypes).
-    vcf_file: The original data VCF file, from which coverage information will
-              extracted.
-    popfile: Name of file containing the population assignments for
-             each sample in the VCF. If a sample in the VCF file does
-             not have a corresponding entry in this file, it will be
-             skipped. See dadi.Misc._get_popinfo for information on how this
-             file must be formatted.
-    nseq: Number of sequenced individuals. # XXX: We should just extract this when we parse the VCF file.
-    sim_threshold: This method uses the probability an allele is not called
-                   to switch between analytic and simulation-based methods.
-                   Setting this threshold to 0 will always use simulations,
-                   while setting it to 1 will always use analytics.
+    Generate a version of func accounting for low coverage distortion.
+
+    Args:
+        demo_model: Specified demographic model in dadi.
+        data_dict: A data dictionary comprising information extracted from a VCF file.
+        pop_ids: Population names to be analyzed.
+        nseq: Total number of samples for a given population.
+        nsub: Subsampled number of samples for a given population.
+        sim_threshold: This method switches between analytic and simulation-based methods. 
+            Setting this threshold to 0 will always use simulations, while setting it to 1 will always use analytics. 
+            Values in between indicate that simulations will be employed for thresholds below that value.
+        inbreeding (bool): If True, the model accounts for inbreeding; if False, it does not.
+
     """
-    # XXX: Should automatically extract nseq from the vcf file
+    # Compute coverage distribution
     cov_dist = compute_cov_dist(dd, pop_ids)
     
     # Used to cache matrices used for low-coverage transformation

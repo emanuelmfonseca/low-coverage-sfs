@@ -4,16 +4,18 @@ from dadi.LowCoverage import probability_of_no_call_1D, probability_enough_indiv
 def low_cov_precalc(nsub, nseq, cov_dist, sim_threshold=1e-2, Fx=0, nsim=1000):
     """
     Calculate transformation matrices for low-coverage calling model.
+
+    Args:
+        nsub: Final sample size (in haplotypes)
+        nseq: Sequenced sample size (in haplotypes)
+        cov_dist: Coverage distribution (list of one array per population)
+        sim_threshold: This method uses the probability an allele is not called
+                    to switch between analytic and simulation-based methods.
+                    Setting this threshold to 0 will always use simulations,
+                    while setting it to 1 will always use analytics.
+        nsim: For simulations, number of simulations per allele frequency combination
+        """
     
-    nsub: Final sample size (in haplotypes)
-    nseq: Sequenced sample size (in haplotypes)
-    cov_dist: Coverage distribution (list of one array per population)
-    sim_threshold: This method uses the probability an allele is not called
-                   to switch between analytic and simulation-based methods.
-                   Setting this threshold to 0 will always use simulations,
-                   while setting it to 1 will always use analytics.
-    nsim: For simulations, number of simulations per allele frequency combination
-    """
     # As a lower bound on the probability that a allele with a given frequency is not called,
     # use the probability it is not called considering only the reads in each individual population.
     # We calculate them separately, then combine them into a single matrix
