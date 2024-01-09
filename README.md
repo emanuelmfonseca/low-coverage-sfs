@@ -38,8 +38,7 @@ make_low_cov_func(demo_model, data_dict, pop_ids, nseq, nsub, sim_threshold, inb
 - nseq: total number of samples for a given population
 - nsub: subsampled number of samples for a given population
 - sim_threshold: This method switches between analytic and simulation-based methods. Setting this threshold to 0 will always use simulations, while setting it to 1 will always use analytics. Values in between indicate that simulations will be employed for thresholds below that value.
-- inbreeding: should inbreeding be included? [True/False]
-
+- inbreeding (bool): If True, the model accounts for inbreeding; if False, it does not.
 ### Example
 
 #### Import necessary libraries
