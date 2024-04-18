@@ -1,3 +1,14 @@
-!empirical_analysis/
-!empirical_analysis/*
-empirical_analysis/*/*
+!empirical_analysis/CEU_YRI
+!empirical_analysis/CEU_YRI_ANGSD
+!empirical_analysis/reference
+!empirical_analysis/YRI
+!empirical_analysis/YRI_ANGSD
+!empirical_analysis/YRI_indiv_call
+
+empirical_analysis/CEU_YRI/*/
+empirical_analysis/CEU_YRI_ANGSD/*/
+empirical_analysis/reference/GRCh38_full_analysis_set_plus_decoy_hla*
+empirical_analysis/reference/*/
+empirical_analysis/YRI/*/
+empirical_analysis/YRI_ANGSD/*/
+empirical_analysis/YRI_indiv_call/*/
