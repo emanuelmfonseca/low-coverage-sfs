@@ -6,7 +6,7 @@ This repository contains an implementation of a method for correcting low-covera
 
 ## Preprint
 
-Fonseca, E.M., Tran, L., Mendonza, H., Gutenkunst, R.N. Beyond the blur: unveiling population histories with corrected low-coverage genomes (coming soon).
+Fonseca, E.M., Tran, L., Mendonza, H., Gutenkunst, R.N. Population-genetic model inference from low-coverage allele frequency spectra (coming soon).
 
 ## What does this repository contain?
 
