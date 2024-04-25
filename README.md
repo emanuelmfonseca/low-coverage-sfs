@@ -1,4 +1,4 @@
-# Optimizing demographic inference with dadi using low-coverage sequencing data
+# Population-genetic model inference from low-coverage allele frequency spectra
 
 ## Overview
 
