@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains an implementation of a method for correcting low-coverage distortion in demographic inference. The method is designed to address challenges arising from insufficient data coverage, enhancing the accuracy and reliability of the results. Within this repository, you will find code, data, and results encompassing all simulations and empirical data analyses presented in the manuscript 'Inferring beyond the blur: Unveiling population histories with corrected low-coverage genomes.
+This repository contains an implementation of a method for correcting low-coverage distortion in demographic inference. The method is designed to address challenges arising from insufficient data coverage, enhancing the accuracy and reliability of the results. Within this repository, you will find code, data, and results encompassing all simulations and empirical data analyses presented in the manuscript "Population-genetic model inference from low-coverage allele frequency spectra".
 
 ## Preprint
 
