@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #SBATCH --job-name=angsd_CEU_YRI
-#SBATCH --output=outfiles/angsd/%x-%A-%a.out
-#SBATCH --error=outfiles/angsd/%x-%A-%a.err
+#SBATCH --output=outfiles/angsd_samtools/%x-%A-%a.out
+#SBATCH --error=outfiles/angsd_samtools/%x-%A-%a.err
 #SBATCH --account=rgutenk
 #SBATCH --partition=standard
 #SBATCH --nodes=1
@@ -24,7 +24,13 @@ depths=(3x 5x 10x 30x)
 depth=${depths[${SLURM_ARRAY_TASK_ID}]}
 
 # run ANGSD
-$angsd -bam "pop_1_${depth}_bam.filelist" -doSaf 1 -anc $ancestral -r chr20: -GL 2 -P 4 -minMapQ 1 -minQ 30 -out "angsd_results/pop1.${depth}"
-$angsd -bam "pop_2_${depth}_bam.filelist" -doSaf 1 -anc $ancestral -r chr20: -GL 2 -P 4 -minMapQ 1 -minQ 30 -out "angsd_results/pop2.${depth}"
+# $angsd -bam "pop_1_${depth}_bam.filelist" -doSaf 1 -anc $ancestral -r chr20: -GL 2 -P 4 -minMapQ 1 -minQ 30 -out "angsd_results/pop1.${depth}"
+# $angsd -bam "pop_2_${depth}_bam.filelist" -doSaf 1 -anc $ancestral -r chr20: -GL 2 -P 4 -minMapQ 1 -minQ 30 -out "angsd_results/pop2.${depth}"
+
+$angsd -bam "pop_1_${depth}_bam.filelist" -doSaf 1 -anc $ancestral -r chr20: \
+        -GL 1 -P 4 -minMapQ 30 -minQ 20 -minInd 8 -out "angsd_results/pop1.${depth}"
+
+$angsd -bam "pop_2_${depth}_bam.filelist" -doSaf 1 -anc $ancestral -r chr20: \
+        -GL 1 -P 4 -minMapQ 30 -minQ 20 -minInd 8 -out "angsd_results/pop2.${depth}"
 
 $realSFS "angsd_results/pop1.${depth}.saf.idx" "angsd_results/pop2.${depth}.saf.idx" -maxIter 100 -P 4 > "angsd_results/2d.${depth}.sfs.mle.txt"
